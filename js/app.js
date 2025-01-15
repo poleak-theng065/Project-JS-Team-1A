@@ -1,15 +1,6 @@
-import { collection, getDocs } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
-import { db } from "./firebase.js"; // Ensure the correct relative path to firebase.js
+// app.js
 
-async function fetchQuizzes() {
-  const querySnapshot = await getDocs(collection(db, "quizzes"));
-  querySnapshot.forEach((doc) => {
-    console.log(`${doc.id} =>`, doc.data());
-  });
-}
+// Import Firestore instance and required Firestore methods
+import { db } from "./firebase.js";
+import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
-const questions = querySnapshot.docs.map(doc => doc.data().question);
-
-console.log(questions)
-
-fetchQuizzes();
