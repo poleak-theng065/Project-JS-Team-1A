@@ -1,0 +1,82 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.for-form{
+    width: 80%;
+    margin-left: 10%;
+}
+.bg{
+    text-align: center;
+    background-image: url(https://i.pinimg.com/736x/40/71/9d/40719dafac56f7134be7374c4e2d0d2f.jpg);
+    padding: 100px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 30px;
+}
+.Education{
+    border: solid 1px rgb(58, 199, 255);
+    border-radius: 5px;
+    margin-top: 10px;
+}
+#education{
+    margin-left: 20px;
+    padding: 20px;
+}
+.h2{
+    padding: 10px;
+    color: orange;
+    font-size: 20px;
+}
+.Question-quiz{
+    border: solid 1px rgb(255, 175, 26);
+    border-radius: 5px;
+    margin-top: 10px;   
+}
+p{
+    padding: 10px;
+}
+#maltipoint-choice{
+    padding: 10px;
+}
+.ty-input label{
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+.writing-question{
+    border: solid 1px rgb(255, 175, 26);
+    border-radius: 5px;
+    margin-top: 10px; 
+}
+#question{
+    padding: 10px;
+}
+.writing-question input{
+    border: none;
+    width: 99%;
+    padding: 10px;
+}
+button{
+    padding: 10px;
+    width: 100px;
+    background: rgb(84, 205, 246);
+    border: none;
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+}
+button:hover{
+    background: lightblue;
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(2, 1, 1, 0.2);
+}
+footer{
+    background-image: url(https://i.pinimg.com/736x/40/71/9d/40719dafac56f7134be7374c4e2d0d2f.jpg);
+    text-align: center;
+    padding: 50px;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    font-size: 20px;
+}
