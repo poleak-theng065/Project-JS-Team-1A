@@ -32,10 +32,12 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 .answers{
     width: 500px;
     height: 200px;
+    text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: 25px 25px;
@@ -48,6 +50,9 @@ body{
     height: 75px;
     background: white;
     border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button:hover{
