@@ -42,3 +42,4 @@ function initializeCards() {
 
 // Initialize everything when the DOM content is fully loaded
 document.addEventListener('DOMContentLoaded', initializeCards);
+

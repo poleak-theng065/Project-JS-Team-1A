@@ -10,12 +10,13 @@
     />
     <link rel="stylesheet" href="./css/style.css" />
     <script src="./js/app.js" defer></script>
+    <script src="./js/quiz.js" defer></script>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar">welcome to PNC QUIZ Web</nav>
 
-    <!-- Section 1 -->
+    <!-- Section 1
     <section id="section1">
       <div class="btn">
         <button>
@@ -25,7 +26,7 @@
           <h1>Grade</h1>
         </button>
       </div>
-    </section>
+    </section> -->
 
     <!-- Section 2 -->
 
@@ -40,6 +41,18 @@
           </nav>
           <div class="details" style="display: none">
             <h3>English Quiz</h3>
+            <button id="btn1" ><b>Easy</b></button>
+            <button id="btn2"><b>Medium</b></button>
+            <button id="btn3"><b>Difficult</b></button>
+          </div>
+        </div>
+
+        <div class="subject card">
+          <nav id="image">
+            <img src="./picture/English-2-512.webp" alt="" />
+          </nav>
+          <div class="details" style="display: none">
+            <h3>Basic Computer Quiz</h3>
             <button id="btn1"><b>Easy</b></button>
             <button id="btn2"><b>Medium</b></button>
             <button id="btn3"><b>Difficult</b></button>
@@ -51,17 +64,7 @@
             <img src="./picture/English-2-512.webp" alt="" />
           </nav>
           <div class="details" style="display: none">
-            <button id="btn1"><b>Easy</b></button>
-            <button id="btn2"><b>Medium</b></button>
-            <button id="btn3"><b>Difficult</b></button>
-          </div>
-        </div>
-
-        <div class="subject card">
-          <nav id="image">
-            <img src="./picture/English-2-512.webp" alt="" />
-          </nav>
-          <div class="details" style="display: none">
+            <h3>Logic Quiz</h3>
             <button id="btn1"><b>Easy</b></button>
             <button id="btn2"><b>Medium</b></button>
             <button id="btn3"><b>Difficult</b></button>
@@ -81,7 +84,19 @@
             <img src="./picture/English-2-512.webp" alt="" />
           </nav>
           <div class="details" style="display: none">
-            <h3>English Quiz</h3>
+            <h3>HTML Quiz</h3>
+            <button id="btn1" data-level="easylevel" data-topic="html"><b>Easy</b></button>
+            <button id="btn2"><b>Medium</b></button>
+            <button id="btn3"><b>Difficult</b></button>
+          </div>
+        </div>
+
+        <div class="subject card">
+          <nav id="image">
+            <img src="./picture/English-2-512.webp" alt="" />
+          </nav>
+          <div class="details" style="display: none">
+            <h3>CSS Quiz</h3>            
             <button id="btn1"><b>Easy</b></button>
             <button id="btn2"><b>Medium</b></button>
             <button id="btn3"><b>Difficult</b></button>
@@ -93,6 +108,7 @@
             <img src="./picture/English-2-512.webp" alt="" />
           </nav>
           <div class="details" style="display: none">
+            <h3>Alogrithm Quiz</h3>
             <button id="btn1"><b>Easy</b></button>
             <button id="btn2"><b>Medium</b></button>
             <button id="btn3"><b>Difficult</b></button>
@@ -104,17 +120,7 @@
             <img src="./picture/English-2-512.webp" alt="" />
           </nav>
           <div class="details" style="display: none">
-            <button id="btn1"><b>Easy</b></button>
-            <button id="btn2"><b>Medium</b></button>
-            <button id="btn3"><b>Difficult</b></button>
-          </div>
-        </div>
-
-        <div class="subject card">
-          <nav id="image">
-            <img src="./picture/English-2-512.webp" alt="" />
-          </nav>
-          <div class="details" style="display: none">
+            <h3>Git Quiz</h3>
             <button id="btn1"><b>Easy</b></button>
             <button id="btn2"><b>Medium</b></button>
             <button id="btn3"><b>Difficult</b></button>
@@ -123,65 +129,9 @@
       </div>
     </section>
 
-    <!-- Section 4 -->
+    <!-- Quiz -->
 
-    <!-- <section id="section-Quiz-Three">
-    <h2 class="subtitle">TERM Three Quiz</h2>
-
-    <div class="button-container">
-      <div class="card-continer">
-        <div class="button-container">
-          <div class="subject card">
-          <nav id="image">
-              <img src="./picture/English-2-512.webp" alt="">
-          </nav>
-          <div class="details" style="display: none;">
-              <h3>English Quiz</h3>
-              <button id="btn1"><b>Easy</b></button>
-              <button id="btn2"><b>Medium</b></button>
-              <button id="btn3"><b>Difficult</b></button>
-          </div>
-        </div>
-
-        <div class="button-container">
-          <div class="subject card">
-          <nav id="image">
-              <img src="./picture/English-2-512.webp" alt="">
-          </nav>
-          <div class="details" style="display: none;">
-              <button id="btn1"><b>Easy</b></button>
-              <button id="btn2"><b>Medium</b></button>
-              <button id="btn3"><b>Difficult</b></button>
-          </div>
-        </div>
-
-        <div class="button-container">
-          <div class="subject card">
-          <nav id="image">
-              <img src="./picture/English-2-512.webp" alt="">
-          </nav>
-          <div class="details" style="display: none;">
-              <button id="btn1"><b>Easy</b></button>
-              <button id="btn2"><b>Medium</b></button>
-              <button id="btn3"><b>Difficult</b></button>
-          </div>
-        </div>
-
-
-      </div>
-    </div>
-</section> -->
-
-    <!-- Section 5 -->
-
-    <!-- <section id="section-Quiz-Four">
-  <div class="button-container">
-      <button class="btn">Button 1</button>
-      <button class="btn">Button 2</button>
-   </div>
-</section> -->
-
-    <!-- Section 6 -->
+    
 
     <section id="section-Quiz-Five">
       <h1>About Us</h1>

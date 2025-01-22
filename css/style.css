@@ -1,9 +1,7 @@
 
-
 /* card */
 .card-continer{
     display: flex;
-
 }
 
 .subject {   
@@ -51,3 +49,78 @@
     background: rgb(245, 213, 31);
 }
 
+/* Quiz */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+
+.app{
+    max-width: 800px;
+    max-height: 500px;
+    height: 500px;
+    border-radius: 24px;
+    margin: 20px auto;
+    background: orange;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+.ditial{
+    background: white;
+    padding: 14px;
+    border-radius: 14px;
+    width: 300px;
+    height: 75px;
+    display: grid;
+    grid-template-rows: 1fr 3fr;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    text-align: center;
+}
+.display{
+    width: 500px;
+    height: 100px;
+    background: white;
+    border-radius: 24px;
+    border: 5px solid darkblue;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.answers{
+    width: 500px;
+    height: 200px;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px 25px;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    width: 200px;
+    height: 75px;
+    background: white;
+    border-radius: 14px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button:hover{
+    border: 5px solid darkblue;
+}
