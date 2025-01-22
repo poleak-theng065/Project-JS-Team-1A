@@ -3,118 +3,118 @@ import { collection, addDoc, getDocs, getDoc, doc, setDoc } from "https://www.gs
 
 
 // JSON data
-const quizData = {
-    "subject": "JavaScript",
+const quizData = { 
+    "subject": "GitHub",
     "questions": [
       {
-        "question": "What will `console.log(typeof NaN)` output?",
+        "question": "What does the command 'git reset --hard' do?",
         "answers": [
-          "number",
-          "NaN",
-          "undefined",
-          "string"
+          "It resets the current branch to the latest commit",
+          "It deletes all untracked files in the working directory",
+          "It resets the commit history and the working directory to a previous state",
+          "It resets the repository to the state of a specific commit"
         ],
-        "correct_answer": "number"
+        "correct_answer": "It resets the commit history and the working directory to a previous state"
       },
       {
-        "question": "Which method is used to add new elements to the beginning of an array?",
+        "question": "Which command is used to delete a branch both locally and remotely in Git?",
         "answers": [
-          "push()",
-          "unshift()",
-          "shift()",
-          "concat()"
+          "git branch -d <branch_name>",
+          "git branch -D <branch_name>",
+          "git push origin --delete <branch_name>",
+          "git branch -d <branch_name> && git push origin --delete <branch_name>"
         ],
-        "correct_answer": "unshift()"
+        "correct_answer": "git branch -d <branch_name> && git push origin --delete <branch_name>"
       },
       {
-        "question": "What does `this` refer to in a regular function?",
+        "question": "What is the purpose of 'git rebase' in Git?",
         "answers": [
-          "The global object",
-          "The object calling the function",
-          "The function itself",
-          "Undefined"
+          "To merge changes from one branch into another",
+          "To apply commits from one branch onto another branch, replaying the changes",
+          "To create a new commit history",
+          "To remove commits from the history"
         ],
-        "correct_answer": "The global object"
+        "correct_answer": "To apply commits from one branch onto another branch, replaying the changes"
       },
       {
-        "question": "Which of the following is a way to create a new object in JavaScript?",
+        "question": "What does 'git cherry-pick <commit_hash>' do?",
         "answers": [
-          "Object.create()",
-          "new Object()",
-          "{}",
-          "All of the above"
+          "It merges changes from the given commit into the current branch",
+          "It removes the given commit from the current branch",
+          "It adds the given commit as a tag",
+          "It applies the changes from the given commit to the current branch"
         ],
-        "correct_answer": "All of the above"
+        "correct_answer": "It applies the changes from the given commit to the current branch"
       },
       {
-        "question": "What will `console.log('5' + 5)` output?",
+        "question": "What does the command 'git stash' do?",
         "answers": [
-          "10",
-          "55",
-          "'55'",
-          "Error"
+          "It commits changes to the repository without pushing them",
+          "It temporarily saves changes that are not yet committed",
+          "It pushes changes to a remote repository",
+          "It deletes the untracked files"
         ],
-        "correct_answer": "'55'"
+        "correct_answer": "It temporarily saves changes that are not yet committed"
       },
       {
-        "question": "How can you check if a variable is an array in JavaScript?",
+        "question": "What is the effect of 'git pull --rebase'?",
         "answers": [
-          "typeof variable === 'array'",
-          "variable instanceof Array",
-          "Array.isArray(variable)",
-          "Both 'variable instanceof Array' and 'Array.isArray(variable)'"
+          "It pulls changes and merges them with the current branch",
+          "It pulls changes and rebases the current branch on top of the fetched changes",
+          "It reverts local changes to the latest commit",
+          "It fetches the latest changes without modifying the local branch"
         ],
-        "correct_answer": "Both 'variable instanceof Array' and 'Array.isArray(variable)'"
+        "correct_answer": "It pulls changes and rebases the current branch on top of the fetched changes"
       },
       {
-        "question": "What is the output of `0.1 + 0.2 === 0.3`?",
+        "question": "How do you check which branches are available in a remote repository?",
         "answers": [
-          "true",
-          "false",
-          "undefined",
-          "NaN"
+          "git branch -a",
+          "git branch -r",
+          "git remote -v",
+          "git branches"
         ],
-        "correct_answer": "false"
+        "correct_answer": "git branch -r"
       },
       {
-        "question": "Which of the following is not a valid JavaScript data type?",
+        "question": "What is the function of 'git bisect'?",
         "answers": [
-          "Number",
-          "String",
-          "Float",
-          "Undefined"
+          "To find the commit where a bug was introduced by performing a binary search",
+          "To list all the commits between two branches",
+          "To remove a specific commit from the branch history",
+          "To merge branches in a safe way"
         ],
-        "correct_answer": "Float"
+        "correct_answer": "To find the commit where a bug was introduced by performing a binary search"
       },
       {
-        "question": "What will `console.log([] + {})` output?",
+        "question": "What is a 'merge conflict' in Git?",
         "answers": [
-          "[object Object]",
-          "[]{}",
-          "NaN",
-          "Error"
+          "When two branches are merged successfully without any issues",
+          "When Git cannot automatically resolve differences between two commits during a merge",
+          "When you try to commit a file that has already been committed",
+          "When Git pushes changes to a remote repository"
         ],
-        "correct_answer": "[object Object]"
+        "correct_answer": "When Git cannot automatically resolve differences between two commits during a merge"
       },
       {
-        "question": "Which method is used to remove the last element of an array?",
+        "question": "What does 'git fetch' do?",
         "answers": [
-          "pop()",
-          "shift()",
-          "splice()",
-          "remove()"
+          "It fetches the latest changes from the remote repository and merges them",
+          "It fetches the latest changes from the remote repository without merging them",
+          "It updates the local repository with the latest commit",
+          "It downloads all changes from the repository, including branches and tags"
         ],
-        "correct_answer": "pop()"
+        "correct_answer": "It fetches the latest changes from the remote repository without merging them"
       }
     ]
   }
   
-  
+    
 
 // Function to push all questions into a single document
 async function pushQuizDataToSingleDoc() {
   try {
-    const docRef = doc(db, "meduimlevel", "javascript"); // Reference to the 'quizData' document in 'easylevel' collection
+    const docRef = doc(db, "hardlevel", "github"); // Reference to the 'quizData' document in 'easylevel' collection
     await setDoc(docRef, quizData); // Add the entire JSON object to the document
     console.log("Quiz data added successfully to a single document!");
   } catch (error) {
