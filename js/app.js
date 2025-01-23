@@ -2,7 +2,7 @@
 import { db } from "./firebase.js";
 import { getDoc, doc } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-firestore.js";
 
-async function initializeQuizApp(containerSelector, timerSelector, feedbackSelector) {
+async function initializeQuizApp(containerSelector, timerSelector, feedbackSelector, level, subject) {
 
     // Get the quiz container
     const container = document.querySelector(containerSelector);
@@ -16,7 +16,7 @@ async function initializeQuizApp(containerSelector, timerSelector, feedbackSelec
       let timerInterval;
   
       // Firestore Document Reference
-      const docRef = doc(db, 'easylevel', 'html'); // Adjust level/topic dynamically if needed
+      const docRef = doc(db, level, subject); // Adjust level/topic dynamically if needed
       const docSnap = await getDoc(docRef);
   
       if (!docSnap.exists()) {
@@ -148,12 +148,15 @@ function handleButtonClick(quizContainer, card) {
     const buttons = card.querySelectorAll('.details button');
     const categorySection = document.querySelector('.catagory');
     buttons.forEach(button => {
-        button.addEventListener('click', () => {
+        button.addEventListener('click', (event) => {
             console.log('Button clicked!'); // Debugging line
             if (quizContainer) quizContainer.style.display = 'block'; // Show the quiz container
             if (categorySection) categorySection.style.display = 'none'; // Hide the categories section
-            initializeQuizApp('.app', '#timer', '#feedback', './firebase-config.js');
+            const quizLevel =  event.target.dataset.level;
+            const quizSubject = event.target.dataset.subject;
+            initializeQuizApp('.app', '#timer', '#feedback', quizLevel, quizSubject );
         });
+        
     });
 }
 
