@@ -1,244 +1,55 @@
-/* General Styling */
 body {
-    margin: 0;
-    font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #fffaf0, #ffedd5);
-    color: #333;
-    line-height: 1.8;
-  }
-  
-  .navbar {
-    background: linear-gradient(to right, #ff6700, #ff914d);
-    color: #fff;
-    text-align: center;
-    padding: 1.8rem;
-    font-size: 2.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2.5px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  }
-  
-  .catagory {
-    padding: 3rem 1.5rem;
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 2.5rem;
-  }
-  
-  .subtitle {
-    font-size: 2.8rem;
-    color: #ff6700;
-    font-weight: bold;
-    text-align: center;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-  }
-  
-  /* Responsive Card Container */
-  .card-continer {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 2rem;
-    padding: 0 1rem;
-  }
-  
-  .subject.card {
-    background: linear-gradient(145deg, #ffffff, #ffe4c7);
-    border-radius: 20px;
-    overflow: hidden;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    cursor: pointer;
-    position: relative;
-  }
-  
-  .subject.card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.25);
-  }
-  
-  #image {
-    width: 100%;
-    height: 140px; /* Optimized image height */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-    border-bottom: 4px solid #ff6700;
-  }
-  
-  #image img {
-    max-width: 90%;
-    max-height: 100%;
-    object-fit: contain; /* Prevent image distortion */
-  }
-  
-  .app {
-    display: none; /* Hidden by default */
-    background: #fff; /* Simple white background */
-    padding: 1.5rem;
-    border-radius: 15px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    max-width: 700px;
-    margin: 2rem auto;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
-  }
-  
-  .app.active {
-    display: block; /* Show when active */
-    opacity: 1;
-    transform: translateY(0);
-  }
-  
-  .app.hidden {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-  
-  /* Timer and Feedback Section */
-  .ditial {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-    padding: 0.8rem 1rem;
-    background: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  #timer {
-    font-size: 1.8rem;
-    font-weight: bold;
-    color: #e67e22; /* Orange color for timer */
-  }
-  
-  #feedback {
-    font-size: 1.2rem;
-    color: #2ecc71; /* Green for positive feedback */
-    font-weight: bold;
-  }
-  
-  /* Question Display Section */
-  .display {
-    text-align: center;
-    margin-bottom: 1rem;
-    padding: 1rem;
-    background: #f8f9fa; /* Light gray for contrast */
-    color: #333;
-    border-radius: 10px;
-    font-size: 1.4rem;
-    font-weight: bold;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  /* Answers Section */
-  .answers {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); /* Two buttons per row */
-    gap: 1rem;
-    margin-top: 1rem;
-  }
-  
-  .answers .button {
-    padding: 0.8rem;
-    background: #fff;
-    border-radius: 8px;
-    text-align: center;
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #e67e22;
-    border: 2px solid #e67e22; /* Subtle border for buttons */
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: background 0.3s ease, box-shadow 0.3s ease, color 0.3s ease;
-  }
-  
-  .answers .button:hover {
-    background: #e67e22;
-    color: #fff;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  }
-  
-  /* Compact Details Section */
-  .details {
-    text-align: center;
-    padding: 1rem;
-  }
-  
-  .details h3 {
-    font-size: 1.5rem;
-    color: #ff6700;
-    font-weight: bold;
-    margin-bottom: 0.8rem;
-  }
-  
-  .details button {
-    background: linear-gradient(to right, #ff6700, #ff914d);
-    color: #fff;
-    border: none;
-    padding: 0.6rem 1.2rem;
-    margin: 0.3rem;
-    font-size: 1rem;
-    border-radius: 20px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  }
-  
-  .details button:hover {
-    background: linear-gradient(to right, #ff914d, #ff6700);
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  }
-  
-#footer{
-    background: #ff6700;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    gap: 0px;
+  font-family: 'Roboto', sans-serif;
 }
-
-#footer .about .students{
-    display: flex;
-    flex-direction: row;
-    gap: 10px;
-    align-items: center;
-    justify-content: space-evenly;
-    text-align: center;
-}
-  
-  /* Responsive Design for .app */
-  @media (max-width: 768px) {
-    .app {
-      padding: 1rem;
-    }
-  
-    .answers {
-      grid-template-columns: 1fr 1fr; /* Still two buttons per row */
-    }
-  
-    .display {
-      font-size: 1.2rem;
-    }
-  
-    .details h3 {
-      font-size: 1.3rem;
-    }
-  
-    .details button {
-      padding: 0.5rem 1rem;
-      font-size: 0.9rem;
-    }
+/* Sidebar visible on desktop */
+@media (min-width: 640px) {
+  main {
+    margin-left: 16rem; /* sidebar width */
+    padding: 2.5rem 2.5rem 0 2.5rem;
   }
-  
+  #topMobileNav {
+    display: none !important;
+  }
+}
+/* Sidebar hidden on mobile, top nav visible */
+@media (max-width: 639px) {
+  main {
+    margin-left: 0 !important;
+    padding: 5.5rem 1.5rem 1.5rem 1.5rem; /* top nav height + spacing */
+  }
+  #sidebar {
+    display: none !important;
+  }
+  #topMobileNav {
+    display: flex !important;
+  }
+}
+/* Top mobile nav styles */
+#topMobileNav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3.5rem;
+  background-color: #ea580c; /* Tailwind orange-600 */
+  color: white;
+  z-index: 50;
+  display: none;
+  align-items: center;
+  justify-content: space-around;
+}
+#topMobileNav a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  transition: background-color 0.2s;
+}
+#topMobileNav a:hover {
+  background-color: #c2410c; /* Tailwind orange-700 */
+}
+#topMobileNav i {
+  font-size: 1.25rem;
+}

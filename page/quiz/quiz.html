@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS.Quiz APP</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        .timer-bar-fill {
+            transition: width 1s linear;
+        }
+        .answer {
+            transition: all 0.3s ease;
+            min-height: 70px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .answer.correct {
+            background-color: #4CAF50 !important;
+            color: white;
+        }
+        .answer.wrong {
+            background-color: #F44336 !important;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-100 font-['Roboto'] min-h-screen flex flex-col">
+    <header class="bg-orange-500 px-8 py-4 text-2xl text-white shadow-md">
+        JS.Quiz APP - <span class="font-bold" id="quiz-name">General Knowledge</span> Quiz
+    </header>
+    
+    <main class="flex-1 flex flex-col items-center justify-center p-4">
+        <!-- Info Bar -->
+        <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-3xl bg-white p-4 rounded-lg shadow-md mb-4 gap-4 md:gap-0">
+            <div class="question-num bg-blue-100 text-blue-800 px-4 py-2 rounded font-medium">
+                Question <span id="current-question">1</span>/<span id="total-questions">10</span>
+            </div>
+            <div id="timer" class="w-full md:w-auto md:flex-1 md:mx-4">
+                <div id="timer-bar" class="h-4 bg-gray-200 rounded-full overflow-hidden">
+                    <div id="timer-bar-fill" class="h-full bg-orange-500 timer-bar-fill" style="width: 100%"></div>
+                </div>
+            </div>
+            <div class="score-box bg-green-100 text-green-800 px-4 py-2 rounded font-medium">
+                Score: <span id="score">0</span>
+            </div>
+        </div>
+
+        <!-- Question Box -->
+        <div class="question-box bg-white w-full max-w-3xl rounded-lg shadow-md overflow-hidden flex-1 flex flex-col">
+            <div class="question p-6 text-xl font-medium border-b border-gray-200 flex items-center justify-center text-center min-h-[100px]">
+                What is the capital of France?
+            </div>
+            <div class="answers grid grid-cols-1 md:grid-cols-2 gap-3 p-4 flex-1">
+                <div class="answer bg-gray-50 hover:bg-gray-100 p-4 rounded-lg cursor-pointer border border-gray-200" data-answer="1">
+                    London
+                </div>
+                <div class="answer bg-gray-50 hover:bg-gray-100 p-4 rounded-lg cursor-pointer border border-gray-200" data-answer="2">
+                    Paris
+                </div>
+                <div class="answer bg-gray-50 hover:bg-gray-100 p-4 rounded-lg cursor-pointer border border-gray-200" data-answer="3">
+                    Berlin
+                </div>
+                <div class="answer bg-gray-50 hover:bg-gray-100 p-4 rounded-lg cursor-pointer border border-gray-200" data-answer="4">
+                    Madrid
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Message -->
+        <div id="feedback" class="mt-4 text-lg font-medium hidden p-3 rounded-lg"></div>
+    </main>
+
+    <footer class="bg-gray-800 text-white text-center py-4">
+        <p>JS.Quiz APP © 2023 - Test your knowledge!</p>
+    </footer>
+</body>
+</html>
