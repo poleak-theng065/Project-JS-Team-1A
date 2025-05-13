@@ -53,3 +53,7 @@ body {
 #topMobileNav i {
   font-size: 1.25rem;
 }
+.swal2-popup {
+      border: 4px solid #f97316; /* Tailwind orange-500 */
+      border-radius: 0.5rem; /* rounded-lg */
+    }
