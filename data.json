@@ -1,0 +1,66 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "fullname": "John Doe",
+      "email": "john@example.com",
+      "password": "hashed_password",
+      "user-progression": {
+        "highest-score": 100,
+        "total-score": 200,
+        "quizzes-completed": 5,
+        "daily-streak": 3
+      },
+      "user-costume-quizzes": [
+        {
+          "id": "1",
+          "title": "Math Quiz",
+          "description": "Test your math skills",
+          "questions": [
+            {
+              "question": "What is 2 + 2?",
+              "options": ["3", "4", "5"],
+              "correct_answer": "4"
+            },
+            {
+              "question": "What is 5 * 6?",
+              "options": ["30", "25", "35"],
+              "correct_answer": "30"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "fullname": "Jane Smith",
+      "email": "jane@example.com",
+      "password": "hashed_password_2",
+      "user-progression": {
+        "highest-score": 150,
+        "total-score": 300,
+        "quizzes-completed": 10,
+        "daily-streak": 7
+      },
+      "user-costume-quizzes": [
+        {
+          "id": "2",
+          "title": "Science Quiz",
+          "description": "Test your science knowledge",
+          "questions": [
+            {
+              "question": "What planet is known as the Red Planet?",
+              "options": ["Earth", "Mars", "Jupiter"],
+              "correct_answer": "Mars"
+            },
+            {
+              "question": "What is the chemical symbol for water?",
+              "options": ["H2O", "O2", "CO2"],
+              "correct_answer": "H2O"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -57,5 +57,3 @@ document.addEventListener('DOMContentLoaded', async () => {
     });
   });
 });
-
-// Your other quiz app logic can go here
