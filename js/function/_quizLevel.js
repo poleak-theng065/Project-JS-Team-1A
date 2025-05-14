@@ -18,63 +18,40 @@ function ChooseLevel(quizID) {
       buttonsStyling: false
     }).then((result) => {
       if (result.dismiss === Swal.DismissReason.cancel) {
-        reject(new Error('User cancelled'));
+        reject(new Error('User cancelled level selection'));
       }
     });
 
     const popup = Swal.getPopup();
-    popup.querySelector('#hard').addEventListener('click', () => {
-      Swal.close();
-      Swal.fire({
-        icon: 'success',
-        title: 'You selected: Hard',
-        timer: 1500,
-        showConfirmButton: false,
-      });
-      resolve({ quizId: quizID, level: 'hard' });
-    });
-    
-    popup.querySelector('#medium').addEventListener('click', () => {
-      Swal.close();
-      Swal.fire({
-        icon: 'success',
-        title: 'You selected: Medium',
-        timer: 1500,
-        showConfirmButton: false,
-      });
-      resolve({ quizId: quizID, level: 'medium' });
-    });
-    
-    popup.querySelector('#easy').addEventListener('click', () => {
-      Swal.close();
-      Swal.fire({
-        icon: 'success',
-        title: 'You selected: Easy',
-        timer: 1500,
-        showConfirmButton: false,
-      });
-      resolve({ quizId: quizID, level: 'easy' });
-    });
+    if (!popup) {
+      reject(new Error('Popup not found'));
+      return;
+    }
+
+    const hardBtn = popup.querySelector('#hard');
+    const mediumBtn = popup.querySelector('#medium');
+    const easyBtn = popup.querySelector('#easy');
+
+    if (!hardBtn || !mediumBtn || !easyBtn) {
+      reject(new Error('Level buttons not found'));
+      return;
+    }
+
+    hardBtn.addEventListener('click', () => handleLevelSelection(quizID, 'hard', resolve));
+    mediumBtn.addEventListener('click', () => handleLevelSelection(quizID, 'medium', resolve));
+    easyBtn.addEventListener('click', () => handleLevelSelection(quizID, 'easy', resolve));
   });
 }
 
-export { ChooseLevel };
-
-function quizQuestionLevel(id, level, data){
-  let quizId = id;
-  let quizLevel = level;
-  let quizData =  data;
-  let quizQuestion = null;
-
-  for (let i = 0; i < quizData.length; i++) {
-      if (quizData[i].id === quizId) {
-          quizQuestion = quizData[i][quizLevel];
-          break;
-      }
-  }
-
-  return quizQuestion;
+function handleLevelSelection(quizID, level, resolve) {
+  Swal.close();
+  Swal.fire({
+    icon: 'success',
+    title: `You selected: ${level.charAt(0).toUpperCase() + level.slice(1)}`,
+    timer: 1500,
+    showConfirmButton: false,
+  });
+  resolve({ quizId: quizID, level: level });
 }
 
-// Export the function for use in other modules
-export { quizQuestionLevel };
+export { ChooseLevel };
