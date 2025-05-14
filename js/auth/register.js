@@ -1,111 +1,50 @@
-// Import Firebase modules
-import { db } from "../firebase.js";
-import { ref, set } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-database.js";
-import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.1.0/firebase-auth.js";
+// register.js
+import { db, auth } from '../firebase.js';
+import { ref, set } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-database.js";
+import { createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
 
-// Initialize Firebase Auth
-const auth = getAuth();
 
-// DOM elements
-const registerForm = document.querySelector('form');
-const fullNameInput = document.getElementById('fullname');
-const emailInput = document.getElementById('email');
-const passwordInput = document.getElementById('password');
-const confirmPasswordInput = document.getElementById('confirmPassword');
 
-// Password toggle functions
-window.togglePassword = function() {
-  const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-  passwordInput.setAttribute('type', type);
-  const eyeIcon = document.getElementById('eyeIcon');
-  eyeIcon.classList.toggle('fa-eye-slash');
-  eyeIcon.classList.toggle('fa-eye');
-};
+// Form elements
+const username = document.getElementById("fullname");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
 
-window.toggleConfirmPassword = function() {
-  const type = confirmPasswordInput.getAttribute('type') === 'password' ? 'text' : 'password';
-  confirmPasswordInput.setAttribute('type', type);
-  const eyeIconConfirm = document.getElementById('eyeIconConfirm');
-  eyeIconConfirm.classList.toggle('fa-eye-slash');
-  eyeIconConfirm.classList.toggle('fa-eye');
-};
 
-// Form submission handler
-registerForm.addEventListener('submit', async (e) => {
+// Submit button event
+const submitBtn = document.getElementById("registerBtn");
+submitBtn.addEventListener("click", async (e) => {
   e.preventDefault();
   
-  const fullName = fullNameInput.value.trim();
-  const email = emailInput.value.trim();
-  const password = passwordInput.value;
-  const confirmPassword = confirmPasswordInput.value;
+  const usernameValue = username.value;
+  const emailValue = email.value;
+  const passwordValue = password.value;
 
-  // Validation
-  if (!fullName || !email || !password || !confirmPassword) {
-    alert('Please fill in all fields');
-    return;
-  }
+  createUserWithEmailAndPassword(auth, emailValue, passwordValue)
+    .then((userCredential) => {
+      const user = userCredential.user;
 
-  if (password !== confirmPassword) {
-    alert('Passwords do not match');
-    return;
-  }
+      // Set initial user data (remove password storage!)
+      return set(ref(db, "users/" + user.uid), {
+        id: user.uid,
+        fullname: usernameValue,
+        email: emailValue,
+        // Removed password storage - it's not secure!
 
-  if (password.length < 6) {
-    alert('Password should be at least 6 characters');
-    return;
-  }
-
-  try {
-    // Disable submit button during registration
-    const submitBtn = registerForm.querySelector('button[type="submit"]');
-    submitBtn.disabled = true;
-    submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Registering...';
-
-    // Create user with Firebase Authentication
-    const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-    const user = userCredential.user;
-    
-    // Store additional user data in Realtime Database
-    await set(ref(db, 'users/' + user.uid), {
-      fullName: fullName,
-      email: email,
-      createdAt: new Date().toISOString(),
-      lastLogin: new Date().toISOString(),
-      quizScores: {}, // Initialize empty object for future quiz scores
-      totalScore: 0,
-      role: "user" // Default role
+        "user-progression": {
+          "highest-score": 0,
+          "total-score": 0,
+          "quizzes-completed": 0,
+          "daily-streak": 0
+        },
+        "user-costume-quizzes": []
+      });
+    })
+    .then(() => {
+      window.location.href = "login.html";
+    })
+    .catch((error) => {
+      console.error("Registration error:", error.message);
+      alert("Registration failed: " + error.message);
     });
-
-    // Registration successful
-    alert('Registration successful!');
-    window.location.href = 'logIn.html'; // Redirect to login page
-    
-  } catch (error) {
-    console.error('Registration error:', error);
-    let errorMessage = 'Registration failed. Please try again.';
-    
-    switch (error.code) {
-      case 'auth/email-already-in-use':
-        errorMessage = 'Email is already in use.';
-        break;
-      case 'auth/invalid-email':
-        errorMessage = 'Invalid email address.';
-        break;
-      case 'auth/weak-password':
-        errorMessage = 'Password should be at least 6 characters.';
-        break;
-      case 'auth/network-request-failed':
-        errorMessage = 'Network error. Please check your internet connection.';
-        break;
-    }
-    
-    alert(errorMessage);
-  } finally {
-    // Re-enable submit button
-    const submitBtn = registerForm.querySelector('button[type="submit"]');
-    if (submitBtn) {
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Register';
-    }
-  }
 });

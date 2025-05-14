@@ -105,33 +105,10 @@
             </span>
           </div>
         </div>
-        <div>
-          <label
-            class="block text-black font-semibold mb-2 text-sm sm:text-base"
-            for="confirmPassword"
-          >
-            Confirm Password
-          </label>
-          <div class="relative">
-            <input
-              class="w-full border border-orange-400 rounded-md py-2.5 sm:py-3 px-3 sm:px-4 pr-10 text-black placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-500 text-sm sm:text-base"
-              id="confirmPassword"
-              name="confirmPassword"
-              placeholder="Re-enter your password"
-              required=""
-              type="password"
-            />
-            <span
-              class="absolute inset-y-0 right-3 flex items-center text-orange-500 cursor-pointer text-sm sm:text-base"
-              onclick="toggleConfirmPassword()"
-            >
-              <i class="fas fa-eye" id="eyeIconConfirm"> </i>
-            </span>
-          </div>
-        </div>
         <button
           class="w-full bg-orange-600 hover:bg-orange-700 text-white font-bold py-3 rounded-md transition-colors duration-300 text-sm sm:text-base"
           type="submit"
+          id="registerBtn"
         >
           Register
         </button>
@@ -146,5 +123,22 @@
         </a>
       </p>
     </div>
+    <script>
+      function togglePassword() {
+        const passwordInput = document.getElementById("password");
+        const eyeIcon = document.getElementById("eyeIcon");
+
+        if (passwordInput.type === "password") {
+          passwordInput.type = "text";
+          eyeIcon.classList.remove("fa-eye");
+          eyeIcon.classList.add("fa-eye-slash");
+        } else {
+          passwordInput.type = "password";
+          eyeIcon.classList.remove("fa-eye-slash");
+          eyeIcon.classList.add("fa-eye");
+        }
+      }
+    </script>
+
   </body>
 </html>
