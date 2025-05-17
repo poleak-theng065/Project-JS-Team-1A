@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>JS.Quiz APP</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        .timer-bar-fill {
-            transition: width 1s linear;
-        }
-        .answer {
-            transition: all 0.3s ease;
-            min-height: 70px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .answer.correct {
-            background-color: #4CAF50 !important;
-            color: white;
-        }
-        .answer.wrong {
-            background-color: #F44336 !important;
-            color: white;
-        }
+      .timer-bar-fill {
+        transition: width 1s linear;
+      }
+      .answer {
+        transition: all 0.3s ease;
+        min-height: 70px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .answer.correct {
+        background-color: #4caf50 !important;
+        color: white;
+      }
+      .answer.wrong {
+        background-color: #f44336 !important;
+        color: white;
+      }
     </style>
-</head>
-<body class="bg-gray-100 font-['Roboto'] min-h-screen flex flex-col">
+    <script src="../../js/setQuiz.js" type="module" defer></script>
+  </head>
+  <body class="bg-gray-100 font-['Roboto'] min-h-screen flex flex-col">
     <header class="bg-orange-500 px-8 py-4 text-2xl text-white shadow-md">
-        JS.Quiz APP - <span class="font-bold" id="quiz-name">General Knowledge</span> Quiz
+      JS.Quiz APP -
+      <span class="font-bold" id="quiz-name">General Knowledge</span> Quiz
+      <button
+        id="set-quiz-btn"
+        class="ml-6 bg-white text-orange-500 font-semibold px-4 py-2 rounded shadow hover:bg-orange-100 transition"
+      >
+        Set Quiz
+      </button>
     </header>
-    
-    <main class="flex-1 flex flex-col items-center justify-center p-4">
-        <!-- Info Bar -->
+    <!--- <main class="flex-1 flex flex-col items-center justify-center p-4">
         <div class="flex flex-col md:flex-row justify-between items-center w-full max-w-3xl bg-white p-4 rounded-lg shadow-md mb-4 gap-4 md:gap-0">
             <div class="question-num bg-blue-100 text-blue-800 px-4 py-2 rounded font-medium">
                 Question <span id="current-question">1</span>/<span id="total-questions">10</span>
@@ -48,7 +57,6 @@
             </div>
         </div>
 
-        <!-- Question Box -->
         <div class="question-box bg-white w-full max-w-3xl rounded-lg shadow-md overflow-hidden flex-1 flex flex-col">
             <div class="question p-6 text-xl font-medium border-b border-gray-200 flex items-center justify-center text-center min-h-[100px]">
                 What is the capital of France?
@@ -69,12 +77,12 @@
             </div>
         </div>
 
-        <!-- Feedback Message -->
         <div id="feedback" class="mt-4 text-lg font-medium hidden p-3 rounded-lg"></div>
-    </main>
+    </main> -->
 
     <footer class="bg-gray-800 text-white text-center py-4">
-        <p>JS.Quiz APP © 2023 - Test your knowledge!</p>
+      <p>JS.Quiz APP © 2023 - Test your knowledge!</p>
     </footer>
-</body>
+
+    <script src="../../js/setQuiz.js" type="module"></script>
 </html>

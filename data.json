@@ -62,5 +62,45 @@
         }
       ]
     }
+  ],
+  "quiz":[
+    {
+      "id":"1",
+      "title":"html-quiz",
+      "description":"Test your HTML knowledge",
+      "difficulty":[
+        {
+          "level":"easy",
+          "questions":[
+            {
+              "question":"What does HTML stand for?",
+              "options":["Hyper Text Markup Language","High Text Markup Language","Hyper Tabular Markup Language"],
+              "correct_answer":"Hyper Text Markup Language"
+            },
+            {
+              "question":"Who is making the Web standards?",
+              "options":["Mozilla","Microsoft","The World Wide Web Consortium"],
+              "correct_answer":"The World Wide Web Consortium"
+            }
+          ]
+        },
+        {
+          "level":"medium",
+          "questions":[
+            {
+              "question":"What is the correct HTML element for inserting a line break?",
+              "options":["<break>","<br>","<lb>"],
+              "correct_answer":"<br>"
+            },
+            {
+              "question":"What is the correct HTML for creating a hyperlink?",
+              "options":["<a>http://www.example.com</a>","<a href='http://www.example.com'>Example</a>","<link>http://www.example.com</link>"],
+              "correct_answer":"<a href='http://www.example.com'>Example</a>"
+            }
+          ]
+        }
+      ]
+    }
   ]
+
 }
