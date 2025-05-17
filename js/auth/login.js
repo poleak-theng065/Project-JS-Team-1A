@@ -19,7 +19,7 @@ submitBtn.addEventListener("click", async (e) => {
     .then((userCredential) => {
       const user = userCredential.user;
         // alert("User login successfully!");
-        alert("Login successfully!");
+        localStorage.setItem("user-uid", user.uid);
     })
     .then(() => {
       window.location.href = "../../index.html";
