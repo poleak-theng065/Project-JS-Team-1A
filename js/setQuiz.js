@@ -33,26 +33,26 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const quizContainer = {
-    id: "1",
-    title: "html-quiz",
-    description: "Test your HTML knowledge",
+    id: "4",
+    title: "general-computing-quiz",
+    description: "Test your general computing knowledge",
     difficulty: [
       {
         level: "easy",
         questions: [
           {
-            question: "What does HTML stand for?",
+            question: "What does CPU stand for?",
             options: [
-              "Hyper Text Markup Language",
-              "High Text Markup Language",
-              "Hyper Tabular Markup Language",
+              "Central Processing Unit",
+              "Computer Processing Unit",
+              "Central Process Unit",
             ],
-            correct_answer: "Hyper Text Markup Language",
+            correct_answer: "Central Processing Unit",
           },
           {
-            question: "Who is making the Web standards?",
-            options: ["Mozilla", "Microsoft", "The World Wide Web Consortium"],
-            correct_answer: "The World Wide Web Consortium",
+            question: "Which of these is not an operating system?",
+            options: ["Linux", "Windows", "Excel"],
+            correct_answer: "Excel",
           },
         ],
       },
@@ -60,19 +60,33 @@ document.addEventListener("DOMContentLoaded", async () => {
         level: "medium",
         questions: [
           {
-            question:
-              "What is the correct HTML element for inserting a line break?",
-            options: ["<break>", "<br>", "<lb>"],
-            correct_answer: "<br>",
+            question: "What does RAM stand for?",
+            options: [
+              "Random Access Memory",
+              "Read-Only Memory",
+              "Rapid Access Memory",
+            ],
+            correct_answer: "Random Access Memory",
           },
           {
-            question: "What is the correct HTML for creating a hyperlink?",
-            options: [
-              "<a>http://www.example.com</a>",
-              "<a href='http://www.example.com'>Example</a>",
-              "<link>http://www.example.com</link>",
-            ],
-            correct_answer: "<a href='http://www.example.com'>Example</a>",
+            question: "Which protocol is used to send email?",
+            options: ["SMTP", "HTTP", "FTP"],
+            correct_answer: "SMTP",
+          },
+        ],
+      },
+      {
+        level: "hard",
+        questions: [
+          {
+            question: "What does the 'B' in BIOS stand for?",
+            options: ["Basic", "Binary", "Boot"],
+            correct_answer: "Basic",
+          },
+          {
+            question: "Which of these is a type of computer architecture?",
+            options: ["Von Neumann", "Albert Einstein", "Stephen Hawking"],
+            correct_answer: "Von Neumann",
           },
         ],
       },
