@@ -64,214 +64,235 @@
     }
   ],
   "quiz": [
-    {
-      "id": "1",
-      "title": "html-quiz",
-      "description": "Test your HTML knowledge",
-      "difficulty": [
-        {
-          "level": "easy",
-          "questions": [
-            {
-              "question": "What does HTML stand for?",
-              "options": ["Hyper Text Markup Language", "High Text Markup Language", "Hyper Tabular Markup Language"],
-              "correct_answer": "Hyper Text Markup Language"
-            },
-            {
-              "question": "Who is making the Web standards?",
-              "options": ["Mozilla", "Microsoft", "The World Wide Web Consortium"],
-              "correct_answer": "The World Wide Web Consortium"
-            }
-          ]
-        },
-        {
-          "level": "medium",
-          "questions": [
-            {
-              "question": "What is the correct HTML element for inserting a line break?",
-              "options": ["<break>", "<br>", "<lb>"],
-              "correct_answer": "<br>"
-            },
-            {
-              "question": "What is the correct HTML for creating a hyperlink?",
-              "options": ["<a>http://www.example.com</a>", "<a href='http://www.example.com'>Example</a>", "<link>http://www.example.com</link>"],
-              "correct_answer": "<a href='http://www.example.com'>Example</a>"
-            }
-          ]
-        },
-        {
-          "level": "hard",
-          "questions": [
-            {
-              "question": "Which HTML5 element provides pronunciation guidance for East Asian characters?",
-              "options": ["<bdo>", "<rt>", "<ruby>"],
-              "correct_answer": "<ruby>"
-            },
-            {
-              "question": "Which attribute specifies that an input field must be filled out?",
-              "options": ["required", "validate", "mandatory"],
-              "correct_answer": "required"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "2",
-      "title": "css-quiz",
-      "description": "Test your CSS knowledge",
-      "difficulty": [
-        {
-          "level": "easy",
-          "questions": [
-            {
-              "question": "What does CSS stand for?",
-              "options": ["Creative Style Sheets", "Cascading Style Sheets", "Computer Style Sheets"],
-              "correct_answer": "Cascading Style Sheets"
-            },
-            {
-              "question": "Which property is used to change the background color?",
-              "options": ["bgcolor", "background-color", "color"],
-              "correct_answer": "background-color"
-            }
-          ]
-        },
-        {
-          "level": "medium",
-          "questions": [
-            {
-              "question": "Which property is used to change the font of an element?",
-              "options": ["font-family", "font-style", "text-font"],
-              "correct_answer": "font-family"
-            },
-            {
-              "question": "How do you select an element with id 'demo'?",
-              "options": [".demo", "*demo", "#demo"],
-              "correct_answer": "#demo"
-            }
-          ]
-        },
-        {
-          "level": "hard",
-          "questions": [
-            {
-              "question": "Which property is used to create space between an element's border and inner content?",
-              "options": ["margin", "spacing", "padding"],
-              "correct_answer": "padding"
-            },
-            {
-              "question": "What does the z-index property control?",
-              "options": ["Horizontal positioning", "Stacking order of elements", "Element transparency"],
-              "correct_answer": "Stacking order of elements"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "3",
-      "title": "javascript-quiz",
-      "description": "Test your JavaScript knowledge",
-      "difficulty": [
-        {
-          "level": "easy",
-          "questions": [
-            {
-              "question": "Inside which HTML element do we put the JavaScript?",
-              "options": ["<javascript>", "<js>", "<script>"],
-              "correct_answer": "<script>"
-            },
-            {
-              "question": "How do you create a function in JavaScript?",
-              "options": ["function = myFunction()", "function myFunction()", "create myFunction()"],
-              "correct_answer": "function myFunction()"
-            }
-          ]
-        },
-        {
-          "level": "medium",
-          "questions": [
-            {
-              "question": "How do you add a comment in JavaScript?",
-              "options": ["<!--This is a comment-->", "//This is a comment", "'This is a comment"],
-              "correct_answer": "//This is a comment"
-            },
-            {
-              "question": "Which operator is used to assign a value to a variable?",
-              "options": ["*", "=", "-"],
-              "correct_answer": "="
-            }
-          ]
-        },
-        {
-          "level": "hard",
-          "questions": [
-            {
-              "question": "What will 'typeof null' return?",
-              "options": ["null", "undefined", "object"],
-              "correct_answer": "object"
-            },
-            {
-              "question": "What is the purpose of the 'use strict' directive?",
-              "options": ["Enforces stricter type checking", "Enables easier debugging", "Enforces stricter parsing and error handling"],
-              "correct_answer": "Enforces stricter parsing and error handling"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "4",
-      "title": "general-computing-quiz",
-      "description": "Test your general computing knowledge",
-      "difficulty": [
-        {
-          "level": "easy",
-          "questions": [
-            {
-              "question": "What does CPU stand for?",
-              "options": ["Central Processing Unit", "Computer Processing Unit", "Central Process Unit"],
-              "correct_answer": "Central Processing Unit"
-            },
-            {
-              "question": "Which of these is not an operating system?",
-              "options": ["Linux", "Windows", "Excel"],
-              "correct_answer": "Excel"
-            }
-          ]
-        },
-        {
-          "level": "medium",
-          "questions": [
-            {
-              "question": "What does RAM stand for?",
-              "options": ["Random Access Memory", "Read-Only Memory", "Rapid Access Memory"],
-              "correct_answer": "Random Access Memory"
-            },
-            {
-              "question": "Which protocol is used to send email?",
-              "options": ["SMTP", "HTTP", "FTP"],
-              "correct_answer": "SMTP"
-            }
-          ]
-        },
-        {
-          "level": "hard",
-          "questions": [
-            {
-              "question": "What does the 'B' in BIOS stand for?",
-              "options": ["Basic", "Binary", "Boot"],
-              "correct_answer": "Basic"
-            },
-            {
-              "question": "Which of these is a type of computer architecture?",
-              "options": ["Von Neumann", "Albert Einstein", "Stephen Hawking"],
-              "correct_answer": "Von Neumann"
-            }
-          ]
-        }
-      ]
-    }
+    [
+      {
+        "id": "1",
+        "title": "HTML",
+        "image": "https://example.com/images/html.png",
+        "description": "Test your HTML knowledge",
+        "difficulty": [
+          {
+            "level": "easy",
+            "questions": [
+              {
+                "question": "What does HTML stand for?",
+                "options": [
+                  "Hyper Text Markup Language",
+                  "High Text Markup Language",
+                  "Hyper Tabular Markup Language",
+                  "Hyperlinks and Text Markup Language"
+                ],
+                "correct_answer": "Hyper Text Markup Language"
+              },
+              {
+                "question": "Who is making the Web standards?",
+                "options": [
+                  "Mozilla",
+                  "Microsoft",
+                  "Google",
+                  "The World Wide Web Consortium"
+                ],
+                "correct_answer": "The World Wide Web Consortium"
+              },
+              {
+                "question": "Choose the correct HTML element for the largest heading:",
+                "options": ["<head>", "<h6>", "<h1>", "<heading>"],
+                "correct_answer": "<h1>"
+              },
+              {
+                "question": "What is the correct HTML element for inserting a line break?",
+                "options": ["<break>", "<br>", "<lb>", "<line>"],
+                "correct_answer": "<br>"
+              },
+              {
+                "question": "Which HTML attribute specifies an alternate text for an image?",
+                "options": ["title", "alt", "src", "longdesc"],
+                "correct_answer": "alt"
+              },
+              {
+                "question": "How can you make a numbered list?",
+                "options": ["<ul>", "<ol>", "<list>", "<dl>"],
+                "correct_answer": "<ol>"
+              },
+              {
+                "question": "How can you make a bulleted list?",
+                "options": ["<ul>", "<ol>", "<dl>", "<list>"],
+                "correct_answer": "<ul>"
+              },
+              {
+                "question": "Which element is used for a hyperlink?",
+                "options": ["<a>", "<link>", "<href>", "<hyper>"],
+                "correct_answer": "<a>"
+              },
+              {
+                "question": "Which tag is used to define an image?",
+                "options": ["<image>", "<img>", "<pic>", "<src>"],
+                "correct_answer": "<img>"
+              },
+              {
+                "question": "HTML files are saved with which extension?",
+                "options": [".html", ".ht", ".xml", ".web"],
+                "correct_answer": ".html"
+              }
+            ]
+          },
+          {
+            "level": "medium",
+            "questions": [
+              {
+                "question": "What is the correct HTML for creating a hyperlink?",
+                "options": [
+                  "<a>http://example.com</a>",
+                  "<a href='http://example.com'>Example</a>",
+                  "<link>http://example.com</link>",
+                  "<href>example</href>"
+                ],
+                "correct_answer": "<a href='http://example.com'>Example</a>"
+              },
+              {
+                "question": "Which tag is used to create a checkbox?",
+                "options": [
+                  "<checkbox>",
+                  "<input type='check'>",
+                  "<input type='checkbox'>",
+                  "<check>"
+                ],
+                "correct_answer": "<input type='checkbox'>"
+              },
+              {
+                "question": "How can you open a link in a new tab?",
+                "options": [
+                  "target='_blank'",
+                  "newwindow='yes'",
+                  "open='new'",
+                  "href='newtab'"
+                ],
+                "correct_answer": "target='_blank'"
+              },
+              {
+                "question": "What is the correct way to comment in HTML?",
+                "options": [
+                  "// comment",
+                  "/* comment */",
+                  "<!-- comment -->",
+                  "# comment"
+                ],
+                "correct_answer": "<!-- comment -->"
+              },
+              {
+                "question": "Which tag is used to define a table?",
+                "options": ["<table>", "<tab>", "<tbl>", "<t>"],
+                "correct_answer": "<table>"
+              },
+              {
+                "question": "Which tag defines a table row?",
+                "options": ["<tr>", "<td>", "<th>", "<row>"],
+                "correct_answer": "<tr>"
+              },
+              {
+                "question": "What tag defines a cell in a table?",
+                "options": ["<tr>", "<td>", "<th>", "<cell>"],
+                "correct_answer": "<td>"
+              },
+              {
+                "question": "Which HTML element defines emphasized text?",
+                "options": ["<i>", "<italic>", "<em>", "<strong>"],
+                "correct_answer": "<em>"
+              },
+              {
+                "question": "Which tag is used to create a dropdown list?",
+                "options": [
+                  "<dropdown>",
+                  "<select>",
+                  "<input type='dropdown'>",
+                  "<option>"
+                ],
+                "correct_answer": "<select>"
+              },
+              {
+                "question": "Which attribute is used to make an input field mandatory?",
+                "options": ["required", "validate", "mandatory", "mustfill"],
+                "correct_answer": "required"
+              }
+            ]
+          },
+          {
+            "level": "hard",
+            "questions": [
+              {
+                "question": "Which HTML5 element provides pronunciation guidance for East Asian characters?",
+                "options": ["<bdo>", "<rt>", "<ruby>", "<rp>"],
+                "correct_answer": "<ruby>"
+              },
+              {
+                "question": "What is the purpose of the <fieldset> element?",
+                "options": [
+                  "To group related form elements",
+                  "To define a field",
+                  "To create input fields",
+                  "To make a form responsive"
+                ],
+                "correct_answer": "To group related form elements"
+              },
+              {
+                "question": "Which tag represents the result of a calculation?",
+                "options": ["<result>", "<output>", "<calc>", "<compute>"],
+                "correct_answer": "<output>"
+              },
+              {
+                "question": "Which tag is used to define navigation links?",
+                "options": ["<nav>", "<menu>", "<link>", "<navigate>"],
+                "correct_answer": "<nav>"
+              },
+              {
+                "question": "Which element is used to embed video content in HTML5?",
+                "options": ["<video>", "<media>", "<embed>", "<movie>"],
+                "correct_answer": "<video>"
+              },
+              {
+                "question": "Which tag is used for marking up contact information?",
+                "options": ["<address>", "<contact>", "<info>", "<footer>"],
+                "correct_answer": "<address>"
+              },
+              {
+                "question": "What does the <canvas> element do?",
+                "options": [
+                  "Displays text",
+                  "Draws graphics",
+                  "Plays music",
+                  "Stores data"
+                ],
+                "correct_answer": "Draws graphics"
+              },
+              {
+                "question": "Which element is used to define a caption for a <figure>?",
+                "options": [
+                  "<figcaption>",
+                  "<caption>",
+                  "<legend>",
+                  "<describe>"
+                ],
+                "correct_answer": "<figcaption>"
+              },
+              {
+                "question": "What does the <bdi> element do?",
+                "options": [
+                  "Isolates text for bidirectional formatting",
+                  "Bold italic text",
+                  "Breaks data into inline format",
+                  "Defines base direction"
+                ],
+                "correct_answer": "Isolates text for bidirectional formatting"
+              },
+              {
+                "question": "Which HTML5 API allows drawing 2D graphics?",
+                "options": ["Canvas", "SVG", "DOM", "GeoLocation"],
+                "correct_answer": "Canvas"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   ]
 }
-
