@@ -7,7 +7,7 @@ import {
   get,
   child,
 } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-database.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
+import { getAuth, signInAnonymously } from "https://www.gstatic.com/firebasejs/11.7.1/firebase-auth.js";
 
 const firebaseConfig = {
   apiKey: "AIzaSyBo5PHjekEhLKwr8-DvwZoQNaKhrwnHlTs",

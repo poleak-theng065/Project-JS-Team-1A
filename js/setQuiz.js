@@ -14,6 +14,7 @@ document.addEventListener("DOMContentLoaded", async () => {
     const quizRef = ref(db, "quizzes/" + quiz.id);
     set(quizRef, {
       title: quiz.title,
+      image: quiz.image,
       description: quiz.description,
       difficulty: quiz.difficulty.map((level) => ({
         level: level.level,
@@ -33,76 +34,70 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   const quizContainer = {
-    id: "1",
-    title: "HTML",
-    image: "https://example.com/images/html.png",
-    description: "Test your HTML knowledge",
+    id: "10",
+    title: "Python Programming",
+    image: "python-question.png",
+    description:
+      "Test your knowledge of Python, a popular high-level programming language used for web development, automation, data analysis, and more.",
     difficulty: [
       {
         level: "easy",
         questions: [
           {
-            question: "What does HTML stand for?",
+            question: "What is the correct file extension for Python files?",
+            options: [".py", ".python", ".pt", ".pyt"],
+            correct_answer: ".py",
+          },
+          {
+            question: "Which keyword is used to define a function in Python?",
+            options: ["func", "define", "def", "function"],
+            correct_answer: "def",
+          },
+          {
+            question: "How do you print something in Python?",
+            options: ["echo()", "console.log()", "print()", "write()"],
+            correct_answer: "print()",
+          },
+          {
+            question:
+              "Which data type is used to store a sequence of characters?",
+            options: ["int", "float", "str", "char"],
+            correct_answer: "str",
+          },
+          {
+            question: "How do you start a comment in Python?",
+            options: ["//", "#", "/*", "--"],
+            correct_answer: "#",
+          },
+          {
+            question: "Which of these is a valid variable name?",
+            options: ["2name", "first-name", "name_1", "class"],
+            correct_answer: "name_1",
+          },
+          {
+            question: "What is the output of: `print(2 + 3 * 4)`?",
+            options: ["20", "14", "24", "18"],
+            correct_answer: "14",
+          },
+          {
+            question: "Which data type is used to store True/False values?",
+            options: ["int", "bool", "str", "bit"],
+            correct_answer: "bool",
+          },
+          {
+            question: "What does `len()` function do?",
             options: [
-              "Hyper Text Markup Language",
-              "High Text Markup Language",
-              "Hyper Tabular Markup Language",
-              "Hyperlinks and Text Markup Language",
+              "Returns length of an object",
+              "Converts to integer",
+              "Creates a list",
+              "Reverses a string",
             ],
-            correct_answer: "Hyper Text Markup Language",
+            correct_answer: "Returns length of an object",
           },
           {
-            question: "Who is making the Web standards?",
-            options: [
-              "Mozilla",
-              "Microsoft",
-              "Google",
-              "The World Wide Web Consortium",
-            ],
-            correct_answer: "The World Wide Web Consortium",
-          },
-          {
-            question:
-              "Choose the correct HTML element for the largest heading:",
-            options: ["<head>", "<h6>", "<h1>", "<heading>"],
-            correct_answer: "<h1>",
-          },
-          {
-            question:
-              "What is the correct HTML element for inserting a line break?",
-            options: ["<break>", "<br>", "<lb>", "<line>"],
-            correct_answer: "<br>",
-          },
-          {
-            question:
-              "Which HTML attribute specifies an alternate text for an image?",
-            options: ["title", "alt", "src", "longdesc"],
-            correct_answer: "alt",
-          },
-          {
-            question: "How can you make a numbered list?",
-            options: ["<ul>", "<ol>", "<list>", "<dl>"],
-            correct_answer: "<ol>",
-          },
-          {
-            question: "How can you make a bulleted list?",
-            options: ["<ul>", "<ol>", "<dl>", "<list>"],
-            correct_answer: "<ul>",
-          },
-          {
-            question: "Which element is used for a hyperlink?",
-            options: ["<a>", "<link>", "<href>", "<hyper>"],
-            correct_answer: "<a>",
-          },
-          {
-            question: "Which tag is used to define an image?",
-            options: ["<image>", "<img>", "<pic>", "<src>"],
-            correct_answer: "<img>",
-          },
-          {
-            question: "HTML files are saved with which extension?",
-            options: [".html", ".ht", ".xml", ".web"],
-            correct_answer: ".html",
+            question: "Which of these is a list?",
+            options: ["{1,2,3}", "(1,2,3)", "[1,2,3]", "<1,2,3>"],
+            correct_answer: "[1,2,3]",
           },
         ],
       },
@@ -110,80 +105,84 @@ document.addEventListener("DOMContentLoaded", async () => {
         level: "medium",
         questions: [
           {
-            question: "What is the correct HTML for creating a hyperlink?",
+            question: "How do you define a class in Python?",
             options: [
-              "<a>http://example.com</a>",
-              "<a href='http://example.com'>Example</a>",
-              "<link>http://example.com</link>",
-              "<href>example</href>",
+              "class MyClass:",
+              "Class MyClass:",
+              "define class MyClass",
+              "class = MyClass",
             ],
-            correct_answer: "<a href='http://example.com'>Example</a>",
+            correct_answer: "class MyClass:",
           },
           {
-            question: "Which tag is used to create a checkbox?",
+            question: "What is a correct syntax to import a module?",
             options: [
-              "<checkbox>",
-              "<input type='check'>",
-              "<input type='checkbox'>",
-              "<check>",
+              "import-module math",
+              "include math",
+              "require math",
+              "import math",
             ],
-            correct_answer: "<input type='checkbox'>",
+            correct_answer: "import math",
           },
           {
-            question: "How can you open a link in a new tab?",
+            question: "What is the output of `type(3.5)`?",
+            options: ["float", "int", "str", "decimal"],
+            correct_answer: "float",
+          },
+          {
+            question: "Which loop runs as long as a condition is true?",
+            options: ["for", "repeat", "while", "loop"],
+            correct_answer: "while",
+          },
+          {
+            question: "Which keyword is used to handle exceptions?",
+            options: ["except", "try", "catch", "finally"],
+            correct_answer: "try",
+          },
+          {
+            question: "What does the `append()` method do to a list?",
             options: [
-              "target='_blank'",
-              "newwindow='yes'",
-              "open='new'",
-              "href='newtab'",
+              "Adds an item",
+              "Removes an item",
+              "Sorts the list",
+              "Duplicates the list",
             ],
-            correct_answer: "target='_blank'",
+            correct_answer: "Adds an item",
           },
           {
-            question: "What is the correct way to comment in HTML?",
+            question: "What is a dictionary in Python?",
             options: [
-              "// comment",
-              "/* comment */",
-              "<!-- comment -->",
-              "# comment",
+              "An ordered list",
+              "A key-value pair collection",
+              "A set",
+              "A string",
             ],
-            correct_answer: "<!-- comment -->",
+            correct_answer: "A key-value pair collection",
           },
           {
-            question: "Which tag is used to define a table?",
-            options: ["<table>", "<tab>", "<tbl>", "<t>"],
-            correct_answer: "<table>",
-          },
-          {
-            question: "Which tag defines a table row?",
-            options: ["<tr>", "<td>", "<th>", "<row>"],
-            correct_answer: "<tr>",
-          },
-          {
-            question: "What tag defines a cell in a table?",
-            options: ["<tr>", "<td>", "<th>", "<cell>"],
-            correct_answer: "<td>",
-          },
-          {
-            question: "Which HTML element defines emphasized text?",
-            options: ["<i>", "<italic>", "<em>", "<strong>"],
-            correct_answer: "<em>",
-          },
-          {
-            question: "Which tag is used to create a dropdown list?",
+            question: "How do you create a virtual environment?",
             options: [
-              "<dropdown>",
-              "<select>",
-              "<input type='dropdown'>",
-              "<option>",
+              "python -venv",
+              "python -m venv env",
+              "pip create env",
+              "env python start",
             ],
-            correct_answer: "<select>",
+            correct_answer: "python -m venv env",
           },
           {
-            question:
-              "Which attribute is used to make an input field mandatory?",
-            options: ["required", "validate", "mandatory", "mustfill"],
-            correct_answer: "required",
+            question: "Which of the following is not a Python keyword?",
+            options: ["lambda", "return", "define", "global"],
+            correct_answer: "define",
+          },
+          {
+            question: "Which method is used to convert a string to lowercase?",
+            options: [
+              "str.lower()",
+              "str.toLower()",
+              "str.down()",
+              "str.to_lowercase()",
+            ],
+            correct_answer: "str.lower()",
           },
         ],
       },
@@ -191,77 +190,90 @@ document.addEventListener("DOMContentLoaded", async () => {
         level: "hard",
         questions: [
           {
+            question: "What is the output of `bool([])`?",
+            options: ["True", "False", "None", "Error"],
+            correct_answer: "False",
+          },
+          {
+            question: "What is a lambda function?",
+            options: [
+              "Named function",
+              "Loop function",
+              "Anonymous function",
+              "Recursive function",
+            ],
+            correct_answer: "Anonymous function",
+          },
+          {
+            question: "Which method is used to add an item to a set?",
+            options: ["append()", "add()", "insert()", "include()"],
+            correct_answer: "add()",
+          },
+          {
+            question: "How are arguments passed in Python?",
+            options: [
+              "By value",
+              "By reference",
+              "By pointer",
+              "By object reference",
+            ],
+            correct_answer: "By object reference",
+          },
+          {
+            question: "What is the difference between `is` and `==`?",
+            options: [
+              "No difference",
+              "`is` checks identity, `==` checks value",
+              "`is` checks type, `==` checks address",
+              "`is` checks value, `==` checks identity",
+            ],
+            correct_answer: "`is` checks identity, `==` checks value",
+          },
+          {
+            question: "Which method is used to remove duplicates from a list?",
+            options: ["set()", "distinct()", "unique()", "remove_duplicates()"],
+            correct_answer: "set()",
+          },
+          {
+            question: "What is a generator in Python?",
+            options: [
+              "Function that returns a list",
+              "Function that uses `yield`",
+              "Function that loops forever",
+              "Class that builds objects",
+            ],
+            correct_answer: "Function that uses `yield`",
+          },
+          {
+            question: "What is the purpose of `__init__` in a class?",
+            options: [
+              "Destroys object",
+              "Initializes attributes",
+              "Inherits a class",
+              "Returns a string",
+            ],
+            correct_answer: "Initializes attributes",
+          },
+          {
             question:
-              "Which HTML5 element provides pronunciation guidance for East Asian characters?",
-            options: ["<bdo>", "<rt>", "<ruby>", "<rp>"],
-            correct_answer: "<ruby>",
+              "Which built-in function returns the memory location of an object?",
+            options: ["id()", "mem()", "loc()", "ref()"],
+            correct_answer: "id()",
           },
           {
-            question: "What is the purpose of the <fieldset> element?",
+            question: "How do you handle multiple exceptions in Python?",
             options: [
-              "To group related form elements",
-              "To define a field",
-              "To create input fields",
-              "To make a form responsive",
+              "try except1 except2",
+              "try except (Exception1, Exception2)",
+              "try catch1 catch2",
+              "try except: Exception1, Exception2",
             ],
-            correct_answer: "To group related form elements",
-          },
-          {
-            question: "Which tag represents the result of a calculation?",
-            options: ["<result>", "<output>", "<calc>", "<compute>"],
-            correct_answer: "<output>",
-          },
-          {
-            question: "Which tag is used to define navigation links?",
-            options: ["<nav>", "<menu>", "<link>", "<navigate>"],
-            correct_answer: "<nav>",
-          },
-          {
-            question: "Which element is used to embed video content in HTML5?",
-            options: ["<video>", "<media>", "<embed>", "<movie>"],
-            correct_answer: "<video>",
-          },
-          {
-            question: "Which tag is used for marking up contact information?",
-            options: ["<address>", "<contact>", "<info>", "<footer>"],
-            correct_answer: "<address>",
-          },
-          {
-            question: "What does the <canvas> element do?",
-            options: [
-              "Displays text",
-              "Draws graphics",
-              "Plays music",
-              "Stores data",
-            ],
-            correct_answer: "Draws graphics",
-          },
-          {
-            question:
-              "Which element is used to define a caption for a <figure>?",
-            options: ["<figcaption>", "<caption>", "<legend>", "<describe>"],
-            correct_answer: "<figcaption>",
-          },
-          {
-            question: "What does the <bdi> element do?",
-            options: [
-              "Isolates text for bidirectional formatting",
-              "Bold italic text",
-              "Breaks data into inline format",
-              "Defines base direction",
-            ],
-            correct_answer: "Isolates text for bidirectional formatting",
-          },
-          {
-            question: "Which HTML5 API allows drawing 2D graphics?",
-            options: ["Canvas", "SVG", "DOM", "GeoLocation"],
-            correct_answer: "Canvas",
+            correct_answer: "try except (Exception1, Exception2)",
           },
         ],
       },
     ],
   };
-
   const setQuizBtn = document.getElementById("set-quiz-btn");
   setQuizBtn.addEventListener("click", () => {
     setQuiz(quizContainer);
