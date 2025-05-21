@@ -15,8 +15,8 @@
     />
     <style>
       body {
-        font-family: "Fredoka One", cursive, "Roboto", sans-serif;
-        background-color: #ffffff;
+        font-family: "Roboto Mono", "Fira Mono", "Menlo", "Consolas", "Liberation Mono", monospace;
+        background-color: #F3E5AB	;
         min-height: 100vh;
       }
       .timer-bar-fill {
@@ -46,7 +46,7 @@
         box-shadow: 0 6px 0 #1a5e30 !important;
         color: white !important;
       }
-      .answer.wrong {
+      .answer.c {
         background-color: #dc3545 !important;
         box-shadow: 0 6px 0 #7a1a1a !important;
         color: white !important;
@@ -88,7 +88,7 @@
       }
 
       [data-answer]:hover {
-        background-color: #f3f4f6;
+        background-color: #ff9900c2;
       }
 
       /* Timer bar transition */
@@ -122,9 +122,9 @@
       </div>
       <button
         class="bg-white text-orange-600 font-bold px-4 py-2 rounded-full shadow-md hover:bg-orange-100 transition select-none"
-        id="set-quiz-btn"
+        id="leave-btn"
       >
-        Set Quiz
+        Leave Quiz
       </button>
     </header>
     <main class="flex-1 flex flex-col items-center justify-center p-4">
