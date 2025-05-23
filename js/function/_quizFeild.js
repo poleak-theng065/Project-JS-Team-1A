@@ -263,3 +263,4 @@ leaveBtn.addEventListener("click", async () => {
   localStorage.removeItem("quiz-level");
   window.location.href = "../../index.html";
 });
+

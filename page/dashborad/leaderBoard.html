@@ -13,8 +13,8 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <link rel="stylesheet" href="CSS/style.css" />
-    <script src="./js/app.js" type="module" defer></script>
+    <link rel="stylesheet" href="../../css/style.css" />
+    <script src="" type="module" defer></script>
   </head>
   <body class="min-h-screen flex flex-col">
     <!-- Sidebar -->
@@ -29,7 +29,7 @@
           alt="Quiz app logo with orange background and white text reading Quiz App"
           class="w-20 h-20 rounded-full mr-3"
           height="48"
-          src="./image/LogoQuizApp.png"
+          src="../../image/LogoQuizApp.png"
           width="48"
         />
         <span class="text-2xl font-bold tracking-wide"> Quiz App </span>
@@ -38,8 +38,8 @@
         <ul class="space-y-4">
           <li>
             <a
-              class="flex items-center px-4 py-3 rounded-md bg-orange-700 hover:bg-orange-800 transition-colors duration-200"
-              href="#"
+              class="flex items-center px-4 py-3 rounded-md hover:bg-orange-700 transition-colors duration-200"
+              href="../../index.html"
             >
               <i class="fas fa-home mr-3 text-lg"> </i>
               <span class="text-lg font-semibold"> Home </span>
@@ -56,8 +56,8 @@
           </li>
           <li>
             <a
-              class="flex items-center px-4 py-3 rounded-md hover:bg-orange-700 transition-colors duration-200"
-              href="./page/dashborad/leaderBoard.html"
+              class="flex items-center px-4 py-3 rounded-md bg-orange-700 hover:bg-orange-800 transition-colors duration-200"
+              href="#"
             >
               <i class="fas fa-trophy mr-3 text-lg"> </i>
               <span class="text-lg font-semibold"> Leaderboard </span>
@@ -87,7 +87,7 @@
 
     <!-- Top mobile nav -->
     <nav id="topMobileNav" role="navigation" aria-label="Mobile top navigation">
-      <a href="#" aria-label="Home">
+      <a href="../../index.html" aria-label="Home">
         <i class="fas fa-home"></i>
         <span>Home</span>
       </a>
@@ -115,93 +115,38 @@
         <!-- Header -->
         <header class="mb-10 border-b border-orange-300 pb-6">
           <h1 class="text-5xl font-extrabold text-orange-600 tracking-tight">
-            Home
+            Leaderboard
           </h1>
         </header>
-        <!-- Hero Banner -->
-        <section
-          class="relative bg-white rounded-xl border border-orange-200 shadow-sm overflow-hidden mb-10 flex flex-col lg:flex-row items-center min-h-[350px]"
-        >
-          <div class="w-full lg:w-1/2 h-full bg-orange-50">
-            <img
-              alt="Student learning illustration"
-              class="w-full h-full object-cover object-center"
-              src="https://assets.designtemplate.io/Online-education-Concept-Student-3D-Character-Illustration-700.webp"
-            />
-          </div>
-          <div
-            class="p-8 lg:p-12 text-gray-900 flex flex-col justify-center w-full lg:w-1/2"
-          >
-            <h2 class="text-2xl md:text-3xl font-bold mb-2 leading-tight">
-              Welcome, <span class="text-orange-600" id="user-name">Alex</span>!
-            </h2>
-            <p class="text-gray-600 mb-6">Ready to test your knowledge?</p>
-            <div class="space-y-4">
-              <div class="flex items-center">
-                <div
-                  class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <span>Take quizzes</span>
-              </div>
-              <div class="flex items-center">
-                <div
-                  class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <span>Create your own</span>
-              </div>
-              <div class="flex items-center">
-                <div
-                  class="w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center mr-3"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="h-4 w-4 text-white"
-                    viewBox="0 0 20 20"
-                    fill="currentColor"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                </div>
-                <span>Top the leaderboard</span>
-              </div>
-            </div>
-          </div>
-        </section>
 
-        <!-- Category Cards -->
+        <!-- user score -->
         <section
           class="relative gap-6 rounded-lg overflow-hidden mb-10 flex flex-col sm:flex-row items-center min-h-[300px] px-4 p-6"
         >
+          <div
+            class="flex flex-col flex-1 bg-gradient-to-tr from-white via-orange-300 to-yellow-500 rounded-3xl p-10 hover:scale-105 transition-transform duration-300 cursor-default w-full"
+          >
+            <div
+              class="flex items-center justify-center w-20 h-20 rounded-full bg-white  mb-6 shadow-lg"
+            >
+                <i class="fas fa-star text-orange-500 text-6xl drop-shadow-lg"></i>
+            </div>
+            <h3
+              class="text-black text-xl font-semibold tracking-wide mb-1 font-poppins uppercase"
+            >
+              Highest <br> Score
+            </h3>
+            <p
+              class="text-black text-6xl font-extrabold leading-none drop-shadow-lg"
+              id="highest-score"
+            >
+              0
+            </p>
+            <p class="text-black mt-3 font-medium tracking-wide">
+                You reached your personal best!
+            </p>
+          </div>
+
           <div
             class="flex flex-col flex-1 bg-gradient-to-tr from-orange-600 via-orange-500 to-yellow-400 rounded-3xl p-10 hover:scale-105 transition-transform duration-300 cursor-default w-full"
           >
@@ -213,7 +158,7 @@
             <h3
               class="text-white text-xl font-semibold tracking-wide mb-1 font-poppins uppercase"
             >
-              Total Score
+              Total <br> Score
             </h3>
             <p
               class="text-white text-6xl font-extrabold leading-none drop-shadow-lg"
@@ -252,26 +197,11 @@
           </div>
         </section>
 
-        <!-- Quiz Card -->
-        <section
-          class="mt-10 mb-10 flex flex-col items-center px-4 max-w-7xl mx-auto w-full"
-        >
-          <h1
-            class="text-5xl font-extrabold text-orange-300 mb-8 drop-shadow-lg select-none w-full max-w-5xl text-center"
-          >
-            <span class="block text-orange-500">Choose Your Quiz</span>
-            <span class="block text-lg text-gray-700 mt-2">
-              Select a category and test your knowledge!
-            </span>
-          </h1>
+        <!-- Top 5 User & Top 5 Strek User -->
+         <section>
+          
+         </section>
 
-          <div
-            class="grid grid-cols-1 sm:grid-cols-2 gap-6 w-full max-w-5xl"
-            id="quiz-container"
-          >
-            <!-- Quiz section-->
-          </div>
-        </section>
       </div>
     </main>
   </body>
