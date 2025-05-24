@@ -119,6 +119,265 @@
             Creat Quiz
           </h1>
         </header>
+
+        <input
+          id="quizName"
+          type="text"
+          placeholder="Enter quiz name"
+          class="w-full rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+          required
+        />
+
+        <form
+          id="quizForm"
+          class="bg-white rounded-3xl shadow-xl p-10 space-y-8 mt-4"
+        >
+          <div id="questionsContainer">
+            <div
+              class="question-block space-y-4 border-b border-orange-200 pb-6 mb-6"
+            >
+              <div>
+                <label class="block text-black font-semibold mb-2"
+                  >Question 1</label
+                >
+                <textarea
+                  name="question"
+                  rows="3"
+                  placeholder="Type your question here..."
+                  class="w-full rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 resize-none focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                  required
+                ></textarea>
+              </div>
+
+              <div>
+                <label class="block text-black font-semibold mb-4"
+                  >Answer Options</label
+                >
+                <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                  <input
+                    type="text"
+                    name="option1"
+                    placeholder="Answer option 1"
+                    class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="option2"
+                    placeholder="Answer option 2"
+                    class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="option3"
+                    placeholder="Answer option 3"
+                    class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                    required
+                  />
+                  <input
+                    type="text"
+                    name="option4"
+                    placeholder="Answer option 4"
+                    class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                    required
+                  />
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-black font-semibold mb-2"
+                  >Correct Answer</label
+                >
+                <select
+                  name="correctAnswer"
+                  class="w-full rounded-xl border border-orange-300 px-5 py-3 text-black text-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                  required
+                >
+                  <option value="" disabled selected>
+                    Select the correct answer
+                  </option>
+                  <option value="1">Answer option 1</option>
+                  <option value="2">Answer option 2</option>
+                  <option value="3">Answer option 3</option>
+                  <option value="4">Answer option 4</option>
+                </select>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-between">
+            <button
+              type="button"
+              id="addQuestionBtn"
+              class="bg-orange-100 text-orange-600 font-semibold rounded-xl px-8 py-3 hover:bg-orange-200 transition"
+            >
+              Add Question
+            </button>
+            <button
+              type="submit"
+              class="bg-orange-600 text-white font-semibold rounded-xl px-8 py-3 hover:bg-orange-700 transition"
+            >
+              Submit Quiz
+            </button>
+          </div>
+        </form>
+
+        <script>
+          const addQuestionBtn = document.getElementById("addQuestionBtn");
+          const questionsContainer =
+            document.getElementById("questionsContainer");
+
+          addQuestionBtn.addEventListener("click", () => {
+            const questionCount =
+              questionsContainer.querySelectorAll(".question-block").length + 1;
+
+            const questionBlock = document.createElement("div");
+            questionBlock.className =
+              "question-block space-y-4 border-b border-orange-200 pb-6 mb-6";
+
+            questionBlock.innerHTML = `
+          <div>
+            <label class="block text-black font-semibold mb-2">Question ${questionCount}</label>
+            <textarea 
+              name="question" 
+              rows="3" 
+              placeholder="Type your question here..." 
+              class="w-full rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 resize-none focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+              required
+            ></textarea>
+          </div>
+
+          <div>
+            <label class="block text-black font-semibold mb-4">Answer Options</label>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              <input 
+                type="text" 
+                name="option1" 
+                placeholder="Answer option 1" 
+                class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                required
+              />
+              <input 
+                type="text" 
+                name="option2" 
+                placeholder="Answer option 2" 
+                class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                required
+              />
+              <input 
+                type="text" 
+                name="option3" 
+                placeholder="Answer option 3" 
+                class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                required
+              />
+              <input 
+                type="text" 
+                name="option4" 
+                placeholder="Answer option 4" 
+                class="rounded-xl border border-orange-300 px-5 py-3 text-black text-lg placeholder-orange-300 focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+                required
+              />
+            </div>
+          </div>
+
+          <div>
+            <label class="block text-black font-semibold mb-2">Correct Answer</label>
+            <select 
+              name="correctAnswer" 
+              class="w-full rounded-xl border border-orange-300 px-5 py-3 text-black text-lg focus:outline-none focus:ring-2 focus:ring-orange-400 transition"
+              required
+            >
+              <option value="" disabled selected>Select the correct answer</option>
+              <option value="1">Answer option 1</option>
+              <option value="2">Answer option 2</option>
+              <option value="3">Answer option 3</option>
+              <option value="4">Answer option 4</option>
+            </select>
+          </div>
+        `;
+
+            questionsContainer.appendChild(questionBlock);
+            questionBlock.scrollIntoView({ behavior: "smooth" });
+          });
+
+          document
+            .getElementById("quizForm")
+            .addEventListener("submit", (e) => {
+              e.preventDefault();
+              const quizName = document.getElementById("quizName").value.trim();
+              if (!quizName) {
+                Swal.fire({
+                  icon: "warning",
+                  title: "Oops...",
+                  text: "Please enter the quiz name.",
+                });
+                return;
+              }
+
+              const questions = [];
+              const questionBlocks =
+                questionsContainer.querySelectorAll(".question-block");
+
+              for (const block of questionBlocks) {
+                const questionText = block
+                  .querySelector('textarea[name="question"]')
+                  .value.trim();
+                const options = [
+                  block.querySelector('input[name="option1"]').value.trim(),
+                  block.querySelector('input[name="option2"]').value.trim(),
+                  block.querySelector('input[name="option3"]').value.trim(),
+                  block.querySelector('input[name="option4"]').value.trim(),
+                ];
+                const correctAnswer = block.querySelector(
+                  'select[name="correctAnswer"]'
+                ).value;
+
+                if (
+                  !questionText ||
+                  options.some((opt) => !opt) ||
+                  !correctAnswer
+                ) {
+                  Swal.fire({
+                    icon: "warning",
+                    title: "Oops...",
+                    text: "Please fill out all fields for each question.",
+                  });
+                  return;
+                }
+
+                questions.push({
+                  question: questionText,
+                  options,
+                  correctAnswer: Number(correctAnswer),
+                });
+              }
+
+              // For demo, just log the quiz data
+              console.log({
+                quizName,
+                questions,
+              });
+
+              Swal.fire({
+                icon: "success",
+                title: "Quiz submitted!",
+                text: "Check console for data.",
+              });
+
+              // Reset form
+              e.target.reset();
+              questionsContainer.innerHTML = "";
+              addQuestionBtn.click(); // Add initial question block back
+            });
+
+          window.addEventListener("DOMContentLoaded", () => {
+            if (questionsContainer.children.length === 0) {
+              addQuestionBtn.click();
+            }
+          });
+        </script>
       </div>
     </main>
   </body>
