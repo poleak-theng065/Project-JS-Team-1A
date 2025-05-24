@@ -1,6 +1,6 @@
 body {
   font-family: "Montserrat", sans-serif;
-  background: #F3E5AB	;
+  background: #f3e5ab;
   margin: 0;
 }
 /* Sidebar visible on desktop */
@@ -58,4 +58,69 @@ body {
 .swal2-popup {
   border: 4px solid #f97316; /* Tailwind orange-500 */
   border-radius: 0.5rem; /* rounded-lg */
+}
+/* Crown icon positioned after name */
+.crown-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 8px;
+  background: linear-gradient(135deg, #f59e0b, #b45309);
+  color: white;
+  border-radius: 9999px;
+  padding: 2px 4px;
+  font-size: 0.75rem;
+  box-shadow: 0 0 6px rgba(245, 158, 11, 0.7);
+  width: 20px;
+  height: 20px;
+}
+
+/* Fire icon with animation */
+.fire-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 6px;
+  color: #f97316;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Rank cell alignment */
+.rank-cell {
+  width: 3.5rem;
+  text-align: center;
+  user-select: none;
+}
+
+/* Consistent rank number display */
+.rank-number {
+  display: inline-block;
+  min-width: 1.75rem;
+  text-align: center;
+}
+
+/* Two-column layout */
+.leaderboard-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+  max-width: 4xl;
+}
+
+@media (max-width: 768px) {
+  .leaderboard-container {
+    grid-template-columns: 1fr;
+  }
 }

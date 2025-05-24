@@ -1,0 +1,125 @@
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1" name="viewport" />
+    <title>Quiz App Home</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="../../CSS/style.css" />
+    <script src="" type="module" defer></script>
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- Sidebar -->
+    <!-- Sidebar -->
+    <aside
+      id="sidebar"
+      class="fixed inset-y-0 left-0 w-64 bg-orange-600 text-white flex flex-col z-40"
+    >
+      <div
+        class="flex items-center justify-center h-20 border-b border-orange-500"
+      >
+        <img
+          alt="Quiz app logo with orange background and white text reading Quiz App"
+          class="w-20 h-20 rounded-full mr-3"
+          height="48"
+          src="../../image/LogoQuizApp.png"
+          width="48"
+        />
+        <span class="text-2xl font-bold tracking-wide"> Quiz App </span>
+      </div>
+      <nav class="flex-1 px-4 py-6 overflow-y-auto">
+        <ul class="space-y-4">
+          <li>
+            <a
+              class="flex items-center px-4 py-3 rounded-md hover:bg-orange-700 transition-colors duration-200"
+              href="../../index.html"
+            >
+              <i class="fas fa-home mr-3 text-lg"> </i>
+              <span class="text-lg font-semibold"> Home </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center px-4 py-3 rounded-md bg-orange-700 hover:bg-orange-800 transition-colors duration-200"
+              href="Page/createQuiz.html"
+            >
+              <i class="fas fa-plus-circle mr-3 text-lg"> </i>
+              <span class="text-lg font-semibold"> Custom </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center px-4 py-3 rounded-md hover:bg-orange-700 transition-colors duration-200"
+              href="../dashborad/leaderBoard.html"
+            >
+              <i class="fas fa-trophy mr-3 text-lg"> </i>
+              <span class="text-lg font-semibold"> Leaderboard </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center px-4 py-3 rounded-md hover:bg-orange-700 transition-colors duration-200"
+              href="#"
+            >
+              <i class="fas fa-user-circle mr-3 text-lg"> </i>
+              <span class="text-lg font-semibold"> Account </span>
+            </a>
+          </li>
+          <li>
+            <a
+              class="flex items-center px-4 py-3 rounded-md hover:bg-orange-700 transition-colors duration-200"
+              href="#"
+            >
+              <i class="fas fa-cog mr-3 text-lg"> </i>
+              <span class="text-lg font-semibold"> Settings </span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Top mobile nav -->
+    <nav id="topMobileNav" role="navigation" aria-label="Mobile top navigation">
+      <a href="../../index.html" aria-label="Home">
+        <i class="fas fa-home"></i>
+        <span>Home</span>
+      </a>
+      <a href="Page/createQuiz.html" aria-label="Create Quiz">
+        <i class="fas fa-plus-circle"></i>
+        <span>Create</span>
+      </a>
+      <a href="#" aria-label="Leaderboard">
+        <i class="fas fa-trophy"></i>
+        <span>Leaderboard</span>
+      </a>
+      <a href="#" aria-label="Account">
+        <i class="fas fa-user-circle"></i>
+        <span>Account</span>
+      </a>
+      <a href="#" aria-label="Settings">
+        <i class="fas fa-cog"></i>
+        <span>Settings</span>
+      </a>
+    </nav>
+
+    <!-- Main content -->
+    <main id="mainContent" class="flex-1 min-h-screen flex flex-col">
+      <div class="p-6 sm:p-10">
+        <!-- Header -->
+        <header class="mb-10 border-b border-orange-300 pb-6">
+          <h1 class="text-5xl font-extrabold text-orange-600 tracking-tight">
+            Creat Quiz
+          </h1>
+        </header>
+      </div>
+    </main>
+  </body>
+</html>
